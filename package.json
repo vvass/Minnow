@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/vvass/Minnow/issues"
   },
-  "homepage": "https://github.com/vvass/Minnow"
+  "homepage": "https://github.com/vvass/Minnow",
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
 }
