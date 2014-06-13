@@ -1,0 +1,19 @@
+{
+  "name": "Minnow",
+  "version": "0.1.0",
+  "description": "Cenus Data Widget",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vvass/Minnow.git"
+  },
+  "author": "vvass and ali",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vvass/Minnow/issues"
+  },
+  "homepage": "https://github.com/vvass/Minnow"
+}
