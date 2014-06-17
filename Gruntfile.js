@@ -2,29 +2,18 @@
     //Gruntfile
     module.exports = function(grunt) {
 
-    //Initializing the configuration object
-      grunt.initConfig({
 
-        // Task configuration
-        concat: {
-          //...
-        },
-        less{
-          //...
-        },
-        uglify{
-          //...
-        },
-        phpunit{
-          //...
-        },
-        watch{
-          //...
-        }
-      });
+        grunt.initConfig({
+            pkg: grunt.file.readJSON('package.json'),
+            connect: {
+                example: {
+                    port: 1337,
+                    base: 'src'
+                }
+            }
+        });
 
-    // Plugin loading
-
-    // Task definition
+        grunt.loadNpmTasks('grunt-connect');
+        grunt.registerTask('default', 'connect:example');
 
     };
