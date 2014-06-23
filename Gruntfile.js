@@ -32,13 +32,7 @@
                         //controllers
 //                        'src/project.js',
                         //views
-                        'src/view/test.js',
-
-                        //outside libraries
-                        './bower_components/jquery/jquery.js',
-                        './bower_components/bootstrap/dist/js/bootstrap.js',
-                        './lib/d3.v3.min.js',
-                        './lib/topojson.v1.min.js'
+                        'src/view/test.js'
 
                     ],
 
