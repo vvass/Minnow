@@ -4,6 +4,9 @@
 
 
         grunt.initConfig({
+            devserver: {
+                server: {}
+            },
             pkg: grunt.file.readJSON('package.json'),
             connect: {
                 main: {
@@ -67,6 +70,7 @@
         grunt.loadNpmTasks('grunt-include-bootstrap');
         grunt.loadNpmTasks('grunt-contrib-concat');
         grunt.loadNpmTasks('grunt-contrib-uglify');
+        grunt.loadNpmTasks('grunt-devserver');
 //        grunt.loadNpmTasks('grunt-contrib-watch');
         grunt.registerTask('default', 'connect:main');
 
