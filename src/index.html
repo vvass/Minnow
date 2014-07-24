@@ -33,9 +33,7 @@
             float: right;
         }
 
-        h1, h2, h3, h4{
-            outline: none;
-        }
+        
 
     </style>
 
@@ -103,47 +101,28 @@ d3.select(self.frameElement).style("height", height + "px");
 
 
 //JQuery Accordion for the drop down menus
-$(document).ready(
-  function () {
+$(document).ready(function () {
+    var parentDivs = $('#dropDownMenusAccordion div'),
+        childDivs = $('#dropDownMenusAccordion h3').siblings('div');
 
+    $('#dropDownMenusAccordion h2').click(function () {
+        parentDivs.slideUp();
+        if ($(this).next().is(':hidden')) {
+            $(this).next().slideDown();
+        } else {
+            $(this).next().slideUp();
+        }
+    });
 
-
-
-
-    $( "#dropDownMenusAccordion" ).children("div").click(function() {
-        $( this ).children().children().show();
-    });    
-
-
-
-
-
-
-
-    $("#dropDownMenusAccordion").accordion({ header: "h3",          
-      autoheight: true,
-      active: false,
-      alwaysOpen: false,
-      fillspace: true,
-      collapsible: true,
-              heightStyle: "content"   //auto, fill, content
-          });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-});    
+    $('#dropDownMenusAccordion h3').click(function () {
+        childDivs.slideUp();
+        if ($(this).next().is(':hidden')) {
+            $(this).next().slideDown();
+        } else {
+            $(this).next().slideUp();
+        }
+    });
+});   
 //End of JQuery Accordion for the drop down menus 
 
 
@@ -154,130 +133,141 @@ $(document).ready(
 <!--HTML CODE  -->
 
 <div id="dropDownMenusAccordion">
-    <!--INCOME DISTRIBUTION-->
-    <h3 id="incomeDistributionHeader">Single Person Income Distribution</h3>
+<!--INCOME DISTRIBUTION-->
+    <h2 id="incomeDistributionHeader">Single Person Income Distribution</h2>
     <div id="incomeDistribution">
-        <ul>
-            <div id="MaleIncome"> Male Income </div>
-            <ul class="MainDemographicSelection">
+        <h3 id="MaleIncome"> Male Income </h3>
+        <div>
+            <ol style ="display: hidden;">
                 <li id="0-30PerYearIncomeMale">Male Income Distribution: 0-30k</li>
                 <li id="31-50PerYearIncomeMale">Male Income Distribution: 31-50k</li>
                 <li id="51-80PerYearIncomeMale">Male Income Distribution: 51-80k</li>
                 <li id="81-120PerIncomeMale">Male Income Distribution: 81-120k</li>
                 <li id="121-150PerIncomeMale">Male Income Distribution: 121-150k</li>
                 <li id="151+PerIncomeMale">Male Income Distribution: 151+</li>
-            </ul>
+            </ol>
+        </div>
 
-            <div id="FemaleIncome"> Female Income </div>
-            <ul class="MainDemographicSelection">
+        <h3 id="FemaleIncome"> Female Income </h3>
+        <div>
+            <ol>            
                 <li id="0-30PerYearIncomeFemale">Female Income Distribution: 0-30k</li>
                 <li id="31-50PerYearIncomeFemale">Female Income Distribution: 31-50k</li>
                 <li id="51-80PerYearIncomeFemale">Female Income Distribution: 51-80k</li>
                 <li id="81-120PerIncomeFemale">Female Income Distribution: 81-120k</li>
                 <li id="121-150PerIncomeFemale">Female Income Distribution: 121-150k</li>
-                <li id="151+PerIncomeFemale">Female Income Distribution: 151+</li>
-            </ul>
-        </ul>    
+                <li id="151+PerIncomeFemale">Female Income Distribution: 151+</li>    
+            </ol>
+        </div>
     </div>
 
-    <!--RACE DISTRIBUTION-->
-    <h3 id="raceDistributionHeader">Race Distribution</h3>
+<!--RACE DISTRIBUTION-->
+    <h2 id="raceDistributionHeader">Race Distribution</h2>
     <div id="raceDistribution">
-        <ul>
-            <div id="WhiteNonHispanic"> White Non-Hispanic </div>
-            <ul class="MainDemographicSelection">
+        <h3 id="WhiteNonHispanic"> White Non-Hispanic </h3>
+        <div>    
+            <ol>
                 <li id="noneSelectedWhite">White Distribution: None Selected</li>
                 <li id="0-24PercentWhite">White Distribution: 0-24 Percent</li>
                 <li id="25-50PercentWhite">White Distribution: 25-50 Percent</li>
                 <li id="50-75PercentWhite">White Distribution: 51-75 Percent</li>
                 <li id="76-100PercentWhite">White Distribution: 76-100 Percent</li>
-            </ul>
+            </ol>
+        </div>
 
-            <div id="Black"> Black </div>
-            <ul class="MainDemographicSelection">
+        <h3 id="Black"> Black </h3>
+        <div>
+            <ol>
                 <li id="noneSelectedBlack">Black Distribution: None Selected</li>
                 <li id="0-24PercentBlack">Black Distribution: 0-24 Percent</li>
                 <li id="25-50PercentBlack">Black Distribution: 25-50 Percent</li>
                 <li id="50-75PercentBlack">Black Distribution: 51-75 Percent</li>
                 <li id="76-100PercentBlack">Black Distribution: 76-100 Percent</li>
-            </ul>
+            </ol>
+         </div>   
 
-            <div id="Asian"> Asian </div>
-            <ul class="MainDemographicSelection">
+        <h3 id="Asian"> Asian </h3>
+        <div>
+            <ol>
                 <li id="noneSelectedAsian">Asian Distribution: None Selected</li>
                 <li id="0-24PercentAsian">Asian Distribution: 0-24 Percent</li>
                 <li id="25-50PercentAsian">Asian Distribution: 25-50 Percent</li>
                 <li id="50-75PercentAsian">Asian Distribution: 51-75 Percent</li>
                 <li id="76-100PercentAsian">Asian Distribution: 76-100 Percent</li>
-            </ul>
+            </ol>
+        </div>    
 
-            <div id="Hispanic"> Hispanic </div>
-            <ul class="MainDemographicSelection">
+        <h3 id="Hispanic"> Hispanic </h3>
+        <div>    
+            <ol>
                 <li id="noneSelectedHispanic">Hispanic Distribution: None Selected</li>
                 <li id="0-24PercentHispanic">Hispanic Distribution: 0-24 Percent</li>
                 <li id="25-50PercentHispanic">Hispanic Distribution: 25-50 Percent</li>
                 <li id="50-75PercentHispanic">Hispanic Distribution: 51-75 Percent</li>
                 <li id="76-100PercentHispanic">Hispanic Distribution: 76-100 Percent</li>
-            </ul>
-        </ul>
+            </ol>
+        </div>
     </div>
 
 
-    <!--EDUCATION DISTRIBUTION-->
-    <h3 id="educationDistributionHeader">Highest Level of Education Distribution</h3>
+<!--EDUCATION DISTRIBUTION-->
+    <h2 id="educationDistributionHeader">Highest Level of Education Distribution</h2>
     <div id="educationDistribution">
-        <ul>
-
-            <div id="LessThanHighSchool"> Less Than High School </div>
-            <ul class="MainDemographicSelection">
+        <h3 id="LessThanHighSchool"> Less Than High School </h3>
+        <div>
+            <ol>
                 <li id="noneSelectedLessThanHighSchool">Less Than High School Distribution: None Selected</li>
                 <li id="0-9PercentLessThanHighSchool">Less Than High School Distribution: 0-9 Percent</li>
                 <li id="10-19PercentLessThanHighSchool">Less Than High School Distribution: 10-19 Percent</li>
                 <li id="20-29PercentLessThanHighSchool">Less Than High School Distribution: 20-29 Percent</li>
                 <li id="30-39PercentLessThanHighSchool">Less Than High School Distribution: 30-39 Percent</li>
                 <li id="40+PercentLessThanHighSchool">Less Than High School Distribution: 40+ Percent</li>
-            </ul>
+            </ol>
+        </div>
 
-            <div id="highSchool"> High School </div>
-            <ul class="MainDemographicSelection">
+        <h3 id="highSchool"> High School </h3>
+        <div>
+            <ol>
                 <li id="noneSelectedHighSchool">High School: None Selected</li>
                 <li id="0-24PercentHighSchool">High School: 0-24 Percent</li>
                 <li id="25-50PercentHighSchool">High School: 25-50 Percent</li>
                 <li id="50-75PercentHighSchool">High School: 51-75 Percent</li>
                 <li id="76-100PercentHighSchool">High School: 76-100 Percent</li>
-            </ul>
+            </ol>
+        </div>      
 
-            <div id="Bachelor's"> Bachelor's </div>
-            <ul class="MainDemographicSelection">
+        <h3 id="Bachelor's"> Bachelor's </h3>
+        <div>
+            <ol>
                 <li id="noneSelectedBachelor's">Bachelor's Distribution: None Selected</li>
                 <li id="0-10PercentBachelor's">Bachelor's Distribution: 0-10 Percent</li>
                 <li id="11-20PercentBachelor's">Bachelor's Distribution: 11-20 Percent</li>
                 <li id="21-30PercentBachelor's">Bachelor's Distribution: 21-30 Percent</li>
                 <li id="31-40PercentBachelor's">Bachelor's Distribution: 31-40 Percent</li>
                 <li id="50+PercentBachelor's">Bachelor's Distribution: 50+ Percent</li>
-            </ul>
+            </ol>
+        </div>
 
-            <div id="Graduate"> Some or Completed Graduate </div>
-            <ul class="MainDemographicSelection">
+        <h3 id="Graduate"> Some or Completed Graduate </h3>
+        <div>
+            <ol>
                 <li id="noneSelectedGraduate">Graduate Distribution: None Selected</li>
                 <li id="0-4PercentGraduate">Graduate Distribution: 0-4 Percent</li>
                 <li id="5-9PercentGraduate">Graduate Distribution: 5-9 Percent</li>
                 <li id="10-14PercenGraduatete">Graduate Distribution: 10-14 Percent</li>
                 <li id="15-19PercentGraduate">Graduate Distribution: 15-19 Percent</li>
                 <li id="20+PercentGraduate">Graduate Distribution: 20+ Percent</li>
-            </ul>
-
-        </ul>
+            </ol>
+        </div>
     </div>
 
 
-    <!--AGE DISTRIBUTION-->
-    <h3 id="ageDistributionHeader">Age Distribution</h3>
+<!--AGE DISTRIBUTION-->
+    <h2 id="ageDistributionHeader">Age Distribution</h2>
     <div id="ageDistribution">
-        <ul>
-
-            <div id="9AndUnderage"> Nine Years Old and Younger </div>
-            <ul class="MainDemographicSelection">
+        <h3 id="9AndUnderage"> Nine Years Old and Younger </h3>
+        <div>
+            <ol>
                 <li id="noneSelected9AndUnder">Nine Years Old and Younger: None Selected</li>
                 <li id="0-4Percent9AndUnder">Nine Years Old and Younger: 0-4 Percent</li>
                 <li id="5-9Percent9AndUnder">Nine Years Old and Younger: 5-9 Percent</li>
@@ -285,10 +275,12 @@ $(document).ready(
                 <li id="15-19Percent9AndUnder">Nine Years Old and Younger: 15-19 Percent</li>
                 <li id="20-29Percent9AndUnder">Nine Years Old and Younger: 20-29 Percent</li>
                 <li id="30+Percent9AndUnder">Nine Years Old and Younger: 30+ Percent</li>
-            </ul>
+            </ol>
+        </div>
 
-            <div id="tenTo19age"> Ten Years Old to Nineteen Years Old </div>
-            <ul class="MainDemographicSelection">
+        <h3 id="tenTo19age"> Ten Years Old to Nineteen Years Old </h3>
+        <div>
+            <ol>
                 <li id="noneSelected10To19">Ten Years Old to Nineteen Years Old: None Selected</li>
                 <li id="0-4tenTo19">Ten Years Old to Nineteen Years Old: 0-4 Percent</li>
                 <li id="5-9tenTo19">Ten Years Old to Nineteen Years Old 5-9 Percent</li>
@@ -296,10 +288,12 @@ $(document).ready(
                 <li id="15-19tenTo19">Ten Years Old to Nineteen Years Old: 15-19 Percent</li>
                 <li id="20-29tenTo19">Ten Years Old to Nineteen Years Old: 20-29 Percent</li>
                 <li id="30+tenTo19">Ten Years Old to Nineteen Years Old: 30+ Percent</li>
-            </ul>
+            </ol>
+        </div>
 
-            <div id="twentyfiveToTwentyfour"> Twenty to Twentyfour Years Old </div>
-            <ul class="MainDemographicSelection">
+        <h3 id="twentyfiveToTwentyfour"> Twenty to Twentyfour Years Old </h3>
+        <div>
+            <ol>
                 <li id="noneSelectedtwentyToTwentyfour">Twenty to Twentyfour Years Old: None Selected</li>
                 <li id="0-4twentyToTwentyfour">Twenty to Twentyfour Years Old: 0-4 Percent</li>
                 <li id="5-9twentyToTwentyfour">Twenty to Twentyfour Years Old: 5-9 Percent</li>
@@ -307,21 +301,25 @@ $(document).ready(
                 <li id="15-19twentyToTwentyfour">Twenty to Twentyfour Years Old: 15-19 Percent</li>
                 <li id="20-29twentyToTwentyfour">Twenty to Twentyfour Years Old: 20-29 Percent</li>
                 <li id="30+twentyToTwentyfour">Twenty to Twentyfour Years Old: 30+ Percent</li>
-            </ul>
+            </ol>
+        </div>
 
-            <div id="twentyfiveToThirtyfour"> Twentyfive to Thirtyfour Years Old </div>
-            <ul class="MainDemographicSelection">
-                <li id="noneSelectedtwentyfiveToThirtyfour">Twentyfive to Thirtyfour Years Old: None Selected</li>
+        <h3 id="twentyfiveToThirtyfour"> Twentyfive to Thirtyfour Years Old </h3>
+        <div>
+            <ol>
+                <lili id="noneSelectedtwentyfiveToThirtyfour">Twentyfive to Thirtyfour Years Old: None Selected</li>
                 <li id="0-4twentyfiveToThirtyfour">Twentyfive to Thirtyfour Years Old: 0-4 Percent</li>
                 <li id="5-9twentyfiveToThirtyfour">Twentyfive to Thirtyfour Years Old: 5-9 Percent</li>
                 <li id="10-14twentyfiveToThirtyfour">Twentyfive to Thirtyfour Years Old: 10-14 Percent</li>
                 <li id="15-19twentyfiveToThirtyfour">Twentyfive to Thirtyfour Years Old: 15-19 Percent</li>
                 <li id="20-29twentyfiveToThirtyfour">Twentyfive to Thirtyfour Years Old: 20-29 Percent</li>
                 <li id="30+twentyfiveToThirtyfour">Twentyfive to Thirtyfour Years Old: 30+ Percent</li>
-            </ul>
+            </ol>
+        </div>  
 
-            <div id="ThirtyfiveToFortyfour"> Thirtyfive to Fortyfour Years Old </div>
-            <ul class="MainDemographicSelection">
+        <h3 id="ThirtyfiveToFortyfour"> Thirtyfive to Fortyfour Years Old </h3>
+        <div>
+            <ol>
                 <li id="noneSelectedThirtyfiveToFortyfour">Thirtyfive to Fortyfour Years: None Selected</li>
                 <li id="0-4ThirtyfiveToFortyfour">Thirtyfive to Fortyfour Years Old: 0-4 Percent</li>
                 <li id="5-9ThirtyfiveToFortyfour">Thirtyfive to Fortyfour Years Oldd: 5-9 Percent</li>
@@ -329,10 +327,12 @@ $(document).ready(
                 <li id="15-19ThirtyfiveToFortyfour">Thirtyfive to Fortyfour Years Old: 15-19 Percent</li>
                 <li id="20-29ThirtyfiveToFortyfour">Thirtyfive to Fortyfour Years Old: 20-29 Percent</li>
                 <li id="30+ThirtyfiveToFortyfour">Thirtyfive to Fortyfour Years Old: 30+ Percent</li>
-            </ul>
+            </ol>
+        </div>
 
-            <div id="FortyfiveToFiftyfour"> Fortyfive To Fiftyfour Years Old </div>
-            <ul class="MainDemographicSelection">
+        <h3 id="FortyfiveToFiftyfour"> Fortyfive To Fiftyfour Years Old </h3>
+        <div>
+            <ol>
                 <li id="noneSelectedFortyfiveToFiftyfour">Fortyfive To Fiftyfour Years Old: None Selected</li>
                 <li id="0-4FortyfiveToFiftyfour">Fortyfive To Fiftyfour Years Old: 0-4 Percent</li>
                 <li id="5-9FortyfiveToFiftyfour">Fortyfive To Fiftyfour Years Old: 5-9 Percent</li>
@@ -340,10 +340,12 @@ $(document).ready(
                 <li id="15-19FortyfiveToFiftyfour">Fortyfive To Fiftyfour Years Old: 15-19 Percent</li>
                 <li id="20-29FortyfiveToFiftyfour">Fortyfive To Fiftyfour Years Old: 20-29 Percent</li>
                 <li id="30+FortyfiveToFiftyfour">Fortyfive To Fiftyfour Years Old: 30+ Percent</li>
-            </ul>
+            </ol>
+        </div>
 
-            <div id="FiftyfiveToSixtyfour"> Fiftyfive To Sixtyfour </div>
-            <ul class="MainDemographicSelection">
+        <h3 id="FiftyfiveToSixtyfour"> Fiftyfive To Sixtyfour </h3>
+        <div>
+            <ol>
                 <li id="noneSelectedFiftyfiveToSixtyfour">Fiftyfive To Sixtyfour: None Selected</li>
                 <li id="0-4FiftyfiveToSixtyfour">Fiftyfive To Sixtyfour: 0-4 Percent</li>
                 <li id="5-9FiftyfiveToSixtyfour">Fiftyfive To Sixtyfour: 5-9 Percent</li>
@@ -351,10 +353,12 @@ $(document).ready(
                 <li id="15-19FiftyfiveToSixtyfour">Fiftyfive To Sixtyfour: 15-19 Percent</li>
                 <li id="20-29FiftyfiveToSixtyfour">Fiftyfive To Sixtyfour: 20-29 Percent</li>
                 <li id="30+FiftyfiveToSixtyfour">Fiftyfive To Sixtyfour: 30+ Percent</li>
-            </ul>
+            </ol>
+        </div>
 
-            <div id="sixtyfiveAndOlder"> Sixtyfive And Older </div>
-            <ul class="MainDemographicSelection">
+        <h3 id="sixtyfiveAndOlder"> Sixtyfive And Older </h3>
+        <div>
+            <ol>
                 <li id="noneSelectedSixtyfiveAndOlder">Sixtyfive And Older: None Selected</li>
                 <li id="0-4SixtyfiveAndOlder">Sixtyfive And Older: 0-4 Percent</li>
                 <li id="5-9SixtyfiveAndOlder">Sixtyfive And Older: 5-9 Percent</li>
@@ -362,18 +366,17 @@ $(document).ready(
                 <li id="15-19SixtyfiveAndOlder">Sixtyfive And Older: 15-19 Percent</li>
                 <li id="20-29SixtyfiveAndOlder">Sixtyfive And Older: 20-29 Percent</li>
                 <li id="30+SixtyfiveAndOlder">Sixtyfive And Older: 30+ Percent</li>
-            </ul>
-
-        </ul>
+            </ol>
+        </div>
     </div>
 
 
-    <!--SEX RATIO DISTRIBUTION-->
-    <h3 id="SexRatioHeader">Sex Total Population Ratio</h3>
+<!--SEX RATIO DISTRIBUTION-->
+    <h2 id="SexRatioHeader">Sex Total Population Ratio</h2>
     <div id="SexRatio">
-        <ul>
-            <div id="MaleRatio"> Male Total Population Ratio </div>
-            <ul class="MainDemographicSelection">
+        <h3 id="MaleRatio"> Male Total Population Ratio </h3>
+        <div>
+            <ol>
                 <li id="40AndUnderMaleRatio">Male Total Population Ratio: 40 And Under</li>
                 <li id="41-45MaleRatio">Male Total Population Ratio: 41-45 Percent</li>
                 <li id="46-48MaleRatio">Male Total Population Ratio: 46-48 Percent</li>
@@ -381,10 +384,12 @@ $(document).ready(
                 <li id="52-54MaleRatio">Male Total Population Ratio: 52-54 Percent</li>
                 <li id="55-59MaleRatio">Male Total Population Ratio: 55-59 Percent</li>
                 <li id="60AndOverMaleRatio">Male Total Population Ratio: 60 And Over</li>
-            </ul>
+            </ol>
+        </div>
 
-            <div id="FemaleRatio"> Female Total Population Ratio </div>
-            <ul class="MainDemographicSelection">
+        <h3 id="FemaleRatio"> Female Total Population Ratio </h3>
+        <div>
+            <ol>
                 <li id="40AndUnderFemaleRatio">Female Total Population Ratio: 40 And Under</li>
                 <li id="41-45FemaleRatio">Female Total Population Ratio: 41-45 Percent</li>
                 <li id="46-48FemaleRatio">Female Total Population Ratio: 46-48 Percent</li>
@@ -392,17 +397,17 @@ $(document).ready(
                 <li id="52-54FemaleRatio">Female Total Population Ratio: 52-54 Percent</li>
                 <li id="55-59FemaleRatio">Female Total Population Ratio: 55-59 Percent</li>
                 <li id="60AndOverFemaleRatio">Female Total Population Ratio: 60 And Over</li>
-            </ul>
-        </ul>
+            </ol>
+        </div>
     </div>
 
 
-    <!--Marital Status DISTRIBUTION-->
-    <h3 id="MaritalStatusHeader">Marital Status Distribution</h3>
+<!--Marital Status DISTRIBUTION-->
+    <h2 id="MaritalStatusHeader">Marital Status Distribution</h2>
     <div id="MaritalStatus">
-        <ul>
-            <div id="MaleMaritalStatus"> Male Marital Status Distribution </div>
-            <ul class="MainDemographicSelection">
+        <h3 id="MaleMaritalStatus"> Male Marital Status Distribution </h3>
+        <div>
+            <ol>
                 <li id="40AndUnderMaleMaritalStatus">Male Marital Status: 40 And Under</li>
                 <li id="41-45MaleMaritalStatus">Male Marital Status: 41-45 Percent</li>
                 <li id="46-48MaleMaritalStatus">Male Marital Status: 46-48 Percent</li>
@@ -410,10 +415,12 @@ $(document).ready(
                 <li id="52-54MaleMaritalStatus">Male Marital Status: 52-54 Percent</li>
                 <li id="55-59MaleMaritalStatus">Male Marital Status: 55-59 Percent</li>
                 <li id="60AndOverMaleMaritalStatus">Male Marital Status: 60 And Over</li>
-            </ul>
+            </ol>
+        </div>
 
-            <div id="FemaleFemaleMaritalStatus"> Female Marital Status Distribution </div>
-            <ul class="MainDemographicSelection">
+        <h3 id="FemaleFemaleMaritalStatus"> Female Marital Status Distribution </h3>
+        <div>
+            <ol>
                 <li id="40AndUnderFemaleMaritalStatus">Female Marital Status: 40 And Under</li>
                 <li id="41-45FemaleMaritalStatus">Female Marital Status: 41-45 Percent</li>
                 <li id="46-48FemaleMaritalStatus">Female Marital Status: 46-48 Percent</li>
@@ -421,20 +428,9 @@ $(document).ready(
                 <li id="52-54FemaleMaritalStatus">Female Marital Status: 52-54 Percent</li>
                 <li id="55-59FemaleMaritalStatus">Female Marital Status: 55-59 Percent</li>
                 <li id="60AndOverFemaleMaritalStatus">Female Marital Status: 60 And Over</li>
-            </ul>
-        </ul>
+            </ol>
+        </div>
     </div>
-
-
-</div>
-
-
-
-
-
-
-
-<div id="map">
 </div>
 
 
@@ -443,3 +439,4 @@ $(document).ready(
 
 </body>
 </html>
+
