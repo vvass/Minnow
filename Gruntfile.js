@@ -8,15 +8,26 @@
                 server: {}
             },
             pkg: grunt.file.readJSON('package.json'),
-            connect: {
-                main: {
-                    port: 1337,
-                    base: 'src'
+            // connect: {
+            //     main: {
+            //         port: 1337,
+            //         base: 'src'
 
-                }
-            },
+            //     }
+            // },
             include_bootstrap: {
 
+            },
+            cssmin: {
+                combine: {
+                    files: {
+                        'src/main.css': [
+                            'src/dist/css/menu/menu.css',  
+                            'src/dist/css/bootstrap/bootstrap.css', 
+                            'src/dist/css/d3/d3_map_color_ranges.css' 
+                        ]
+                    }
+                }
             },
             concat: {
                 options: {
@@ -27,13 +38,8 @@
                 },
                 dist: {
                     src: [
-                        //models
-//                        'src/model',
-                        //controllers
-//                        'src/project.js',
-                        //views
-                        'src/view/test.js'
-
+                        'src/dist/js/d3/d3.v3.min.js',
+                        'src/dist/js/bootstrap.js'
                     ],
 
                     dest: 'src/main.js'
@@ -62,7 +68,10 @@
         // Plugin loading
         grunt.loadNpmTasks('grunt-connect');
         grunt.loadNpmTasks('grunt-include-bootstrap');
+        // used to load JS into one file
         grunt.loadNpmTasks('grunt-contrib-concat');
+        // Used to load Css Files into a distination
+        grunt.loadNpmTasks('grunt-contrib-cssmin');
         grunt.loadNpmTasks('grunt-contrib-uglify');
         grunt.loadNpmTasks('grunt-devserver');
 //        grunt.loadNpmTasks('grunt-contrib-watch');
