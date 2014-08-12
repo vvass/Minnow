@@ -1,0 +1,125 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@2.0.0-alpha-5
+3 info using node@v0.11.12-pre
+4 verbose readDependencies using package.json deps
+5 verbose install where, deps [ '/home/alejandro/Desktop/School_Work/Independent_Study/Web_App/Minnow/bower_components/bootstrap',
+5 verbose install   [ 'btoa',
+5 verbose install     'canonical-json',
+5 verbose install     'grunt',
+5 verbose install     'grunt-banner',
+5 verbose install     'grunt-contrib-clean',
+5 verbose install     'grunt-contrib-concat',
+5 verbose install     'grunt-contrib-connect',
+5 verbose install     'grunt-contrib-copy',
+5 verbose install     'grunt-contrib-csslint',
+5 verbose install     'grunt-contrib-cssmin',
+5 verbose install     'grunt-contrib-jade',
+5 verbose install     'grunt-contrib-jshint',
+5 verbose install     'grunt-contrib-less',
+5 verbose install     'grunt-contrib-qunit',
+5 verbose install     'grunt-contrib-uglify',
+5 verbose install     'grunt-contrib-watch',
+5 verbose install     'grunt-csscomb',
+5 verbose install     'grunt-exec',
+5 verbose install     'grunt-html-validation',
+5 verbose install     'grunt-jekyll',
+5 verbose install     'grunt-jscs-checker',
+5 verbose install     'grunt-saucelabs',
+5 verbose install     'grunt-sed',
+5 verbose install     'load-grunt-tasks',
+5 verbose install     'markdown' ] ]
+6 info preinstall bootstrap@3.1.1
+7 verbose readDependencies using package.json deps
+8 verbose already installed skipping btoa@~1.1.1 /home/alejandro/Desktop/School_Work/Independent_Study/Web_App/Minnow/bower_components/bootstrap
+9 verbose already installed skipping canonical-json@~0.0.3 /home/alejandro/Desktop/School_Work/Independent_Study/Web_App/Minnow/bower_components/bootstrap
+10 verbose already installed skipping grunt@~0.4.0 /home/alejandro/Desktop/School_Work/Independent_Study/Web_App/Minnow/bower_components/bootstrap
+11 verbose already installed skipping grunt-banner@~0.2.0 /home/alejandro/Desktop/School_Work/Independent_Study/Web_App/Minnow/bower_components/bootstrap
+12 verbose already installed skipping grunt-contrib-clean@~0.5.0 /home/alejandro/Desktop/School_Work/Independent_Study/Web_App/Minnow/bower_components/bootstrap
+13 verbose already installed skipping grunt-contrib-concat@~0.3.0 /home/alejandro/Desktop/School_Work/Independent_Study/Web_App/Minnow/bower_components/bootstrap
+14 verbose already installed skipping grunt-contrib-connect@~0.6.0 /home/alejandro/Desktop/School_Work/Independent_Study/Web_App/Minnow/bower_components/bootstrap
+15 verbose already installed skipping grunt-contrib-copy@~0.5.0 /home/alejandro/Desktop/School_Work/Independent_Study/Web_App/Minnow/bower_components/bootstrap
+16 verbose already installed skipping grunt-contrib-csslint@~0.2.0 /home/alejandro/Desktop/School_Work/Independent_Study/Web_App/Minnow/bower_components/bootstrap
+17 verbose already installed skipping grunt-contrib-cssmin@~0.7.0 /home/alejandro/Desktop/School_Work/Independent_Study/Web_App/Minnow/bower_components/bootstrap
+18 verbose already installed skipping grunt-contrib-jade@~0.9.1 /home/alejandro/Desktop/School_Work/Independent_Study/Web_App/Minnow/bower_components/bootstrap
+19 verbose already installed skipping grunt-contrib-jshint@~0.8.0 /home/alejandro/Desktop/School_Work/Independent_Study/Web_App/Minnow/bower_components/bootstrap
+20 verbose already installed skipping grunt-contrib-less@~0.9.0 /home/alejandro/Desktop/School_Work/Independent_Study/Web_App/Minnow/bower_components/bootstrap
+21 verbose already installed skipping grunt-contrib-qunit@~0.4.0 /home/alejandro/Desktop/School_Work/Independent_Study/Web_App/Minnow/bower_components/bootstrap
+22 verbose already installed skipping grunt-contrib-uglify@~0.3.0 /home/alejandro/Desktop/School_Work/Independent_Study/Web_App/Minnow/bower_components/bootstrap
+23 verbose already installed skipping grunt-contrib-watch@~0.5.3 /home/alejandro/Desktop/School_Work/Independent_Study/Web_App/Minnow/bower_components/bootstrap
+24 verbose already installed skipping grunt-csscomb@~2.0.1 /home/alejandro/Desktop/School_Work/Independent_Study/Web_App/Minnow/bower_components/bootstrap
+25 verbose already installed skipping grunt-exec@0.4.3 /home/alejandro/Desktop/School_Work/Independent_Study/Web_App/Minnow/bower_components/bootstrap
+26 verbose already installed skipping grunt-html-validation@~0.1.13 /home/alejandro/Desktop/School_Work/Independent_Study/Web_App/Minnow/bower_components/bootstrap
+27 verbose already installed skipping grunt-jekyll@~0.4.1 /home/alejandro/Desktop/School_Work/Independent_Study/Web_App/Minnow/bower_components/bootstrap
+28 verbose already installed skipping grunt-jscs-checker@~0.3.0 /home/alejandro/Desktop/School_Work/Independent_Study/Web_App/Minnow/bower_components/bootstrap
+29 verbose already installed skipping grunt-saucelabs@~5.0.0 /home/alejandro/Desktop/School_Work/Independent_Study/Web_App/Minnow/bower_components/bootstrap
+30 verbose already installed skipping grunt-sed@~0.1.1 /home/alejandro/Desktop/School_Work/Independent_Study/Web_App/Minnow/bower_components/bootstrap
+31 verbose already installed skipping load-grunt-tasks@~0.3.0 /home/alejandro/Desktop/School_Work/Independent_Study/Web_App/Minnow/bower_components/bootstrap
+32 verbose already installed skipping markdown@~0.5.0 /home/alejandro/Desktop/School_Work/Independent_Study/Web_App/Minnow/bower_components/bootstrap
+33 silly resolved []
+34 info build /home/alejandro/Desktop/School_Work/Independent_Study/Web_App/Minnow/bower_components/bootstrap
+35 verbose linkStuff [ false,
+35 verbose linkStuff   false,
+35 verbose linkStuff   false,
+35 verbose linkStuff   '/home/alejandro/Desktop/School_Work/Independent_Study/Web_App/Minnow/bower_components' ]
+36 info linkStuff bootstrap@3.1.1
+37 verbose linkBins bootstrap@3.1.1
+38 verbose linkMans bootstrap@3.1.1
+39 verbose rebuildBundles bootstrap@3.1.1
+40 verbose rebuildBundles [ '.bin',
+40 verbose rebuildBundles   'btoa',
+40 verbose rebuildBundles   'canonical-json',
+40 verbose rebuildBundles   'grunt',
+40 verbose rebuildBundles   'grunt-banner',
+40 verbose rebuildBundles   'grunt-contrib-clean',
+40 verbose rebuildBundles   'grunt-contrib-concat',
+40 verbose rebuildBundles   'grunt-contrib-connect',
+40 verbose rebuildBundles   'grunt-contrib-copy',
+40 verbose rebuildBundles   'grunt-contrib-csslint',
+40 verbose rebuildBundles   'grunt-contrib-cssmin',
+40 verbose rebuildBundles   'grunt-contrib-jade',
+40 verbose rebuildBundles   'grunt-contrib-jshint',
+40 verbose rebuildBundles   'grunt-contrib-less',
+40 verbose rebuildBundles   'grunt-contrib-qunit',
+40 verbose rebuildBundles   'grunt-contrib-uglify',
+40 verbose rebuildBundles   'grunt-contrib-watch',
+40 verbose rebuildBundles   'grunt-csscomb',
+40 verbose rebuildBundles   'grunt-exec',
+40 verbose rebuildBundles   'grunt-html-validation',
+40 verbose rebuildBundles   'grunt-jekyll',
+40 verbose rebuildBundles   'grunt-jscs-checker',
+40 verbose rebuildBundles   'grunt-saucelabs',
+40 verbose rebuildBundles   'grunt-sed',
+40 verbose rebuildBundles   'load-grunt-tasks',
+40 verbose rebuildBundles   'markdown' ]
+41 info install bootstrap@3.1.1
+42 info postinstall bootstrap@3.1.1
+43 info prepublish bootstrap@3.1.1
+44 error peerinvalid The package grunt does not satisfy its siblings' peerDependencies requirements!
+44 error peerinvalid Peer grunt-banner@0.2.3 wants grunt@~0.4.1
+44 error peerinvalid Peer grunt-contrib-clean@0.5.0 wants grunt@~0.4.0
+44 error peerinvalid Peer grunt-contrib-concat@0.3.0 wants grunt@~0.4.0
+44 error peerinvalid Peer grunt-contrib-connect@0.6.0 wants grunt@~0.4.0
+44 error peerinvalid Peer grunt-contrib-copy@0.5.0 wants grunt@~0.4.0
+44 error peerinvalid Peer grunt-contrib-csslint@0.2.0 wants grunt@~0.4.0
+44 error peerinvalid Peer grunt-contrib-cssmin@0.7.0 wants grunt@~0.4.1
+44 error peerinvalid Peer grunt-contrib-jade@0.9.1 wants grunt@~0.4.1
+44 error peerinvalid Peer grunt-contrib-jshint@0.8.0 wants grunt@~0.4.0
+44 error peerinvalid Peer grunt-contrib-less@0.9.0 wants grunt@~0.4.0
+44 error peerinvalid Peer grunt-contrib-qunit@0.4.0 wants grunt@~0.4.0
+44 error peerinvalid Peer grunt-contrib-uglify@0.3.3 wants grunt@~0.4.0
+44 error peerinvalid Peer grunt-contrib-watch@0.5.3 wants grunt@~0.4.0
+44 error peerinvalid Peer grunt-csscomb@2.0.1 wants grunt@~0.4.2
+44 error peerinvalid Peer grunt-exec@0.4.3 wants grunt@~0.4
+44 error peerinvalid Peer grunt-html-validation@0.1.18 wants grunt@~0.4.1
+44 error peerinvalid Peer grunt-jekyll@0.4.2 wants grunt@~0.4.1
+44 error peerinvalid Peer grunt-jscs-checker@0.3.2 wants grunt@0.4.2
+44 error peerinvalid Peer grunt-saucelabs@5.0.1 wants grunt@~0.4.1
+44 error peerinvalid Peer grunt-sed@0.1.1 wants grunt@~0.4
+45 error System Linux 3.11.0-12-generic
+46 error command "node" "/usr/local/bin/npm" "install"
+47 error cwd /home/alejandro/Desktop/School_Work/Independent_Study/Web_App/Minnow/bower_components/bootstrap
+48 error node -v v0.11.12-pre
+49 error npm -v 2.0.0-alpha-5
+50 error code EPEERINVALID
+51 verbose exit [ 1, true ]

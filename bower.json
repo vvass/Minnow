@@ -1,6 +1,6 @@
 {
-  "name": "gruntRocks",
-  "dependencies": {
-    "bootstrap": "~3.1.1"
-  }
+    "name": "gruntRocks",
+    "dependencies": {
+        "bootstrap": "~3.1.1"
+    }
 }

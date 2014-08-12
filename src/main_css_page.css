@@ -1,0 +1,99 @@
+/*CSS for the map */
+.MainDemographicSelection {
+    display: none;
+}
+
+.counties {
+    fill: blue;
+
+}
+
+.states {
+    fill: none;
+    stroke: #fff;
+    stroke-linejoin: round;
+}
+
+
+
+
+#map
+{
+    float: right;
+}
+
+
+
+
+/*CSS for Jquery accordion*/
+.col-md-3
+{
+    border-style: solid;
+    border-width: 5px;
+    border-color:blue;
+}
+
+#TitleBox
+{
+    border-style: solid;
+    border-width: 5px;
+    border-color:blue;
+    font-size: 30px;
+}
+
+#hoverInfoBox
+{
+    border-style: solid;
+    border-width: 5px;
+    border-color:blue;
+    font-size: 30px;   
+}
+
+#appendedList
+{
+    border-style: solid;
+    border-width: 5px;
+    border-color:blue;
+    font-size: 30px;   
+}
+
+
+
+h6:hover 
+{
+    color:blue;
+    text-decoration:none; 
+    font-size: 14px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+h5:hover
+{
+    color:blue;
+    text-decoration:none; 
+    font-size: 16px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+li:hover
+{
+    color:blue;
+    text-decoration:none; 
+    font-size: 12px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;   
+}
+
+li
+{
+    font-size: 10px;
+    list-style-type: none;
+}
